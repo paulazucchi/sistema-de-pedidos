@@ -1,0 +1,3 @@
+C:\Users\Paula\source\repos\AOP2\AOP2\obj\Debug\AOP2.csproj.AssemblyReference.cache
+C:\Users\Paula\source\repos\AOP2\AOP2\obj\Debug\AOP2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Paula\source\repos\AOP2\AOP2\obj\Debug\AOP2.csproj.CoreCompileInputs.cache
