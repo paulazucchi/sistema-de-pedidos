@@ -1,3 +1,8 @@
 C:\Users\Paula\source\repos\AOP2\AOP2\obj\Debug\AOP2.csproj.AssemblyReference.cache
 C:\Users\Paula\source\repos\AOP2\AOP2\obj\Debug\AOP2.csproj.SuggestedBindingRedirects.cache
 C:\Users\Paula\source\repos\AOP2\AOP2\obj\Debug\AOP2.csproj.CoreCompileInputs.cache
+C:\Users\Paula\source\repos\AOP2\AOP2\bin\Debug\AOP2.exe.config
+C:\Users\Paula\source\repos\AOP2\AOP2\bin\Debug\AOP2.exe
+C:\Users\Paula\source\repos\AOP2\AOP2\bin\Debug\AOP2.pdb
+C:\Users\Paula\source\repos\AOP2\AOP2\obj\Debug\AOP2.exe
+C:\Users\Paula\source\repos\AOP2\AOP2\obj\Debug\AOP2.pdb

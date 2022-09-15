@@ -8,9 +8,9 @@ namespace AOP2
 {
     internal class Estagiario : Funcionario
     {
-        public float calcularDescontoMenor(float valorProduto)
+        public override float calcularDesconto(float valorProduto)
         {
-            return 0f;
+            return valorProduto * 0.9f; ;
         }
     }
 }

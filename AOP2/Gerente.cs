@@ -10,9 +10,14 @@ namespace AOP2
     {
         private string Senha { get; set; }
 
-        public float calcularDescontoMaior(float valorProduto)
+        public override float calcularDesconto(float valorProduto)
         {
-            return 0f;
+
+            return valorProduto * 0.8f;
         }
+
+        
+
+        
     }
 }
