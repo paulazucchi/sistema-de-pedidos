@@ -8,16 +8,18 @@ namespace AOP2
 {
     internal class Gerente : Funcionario
     {
-        private string Senha { get; set; }
 
-        public override float calcularDesconto(float valorProduto)
+        public string Senha { get; set; }
+
+        public override float CalcularDesconto(float valorProduto)
         {
 
             return valorProduto * 0.8f;
         }
 
-        
-
-        
+        public Gerente()
+        {
+            Senha = "123";
+        }
     }
 }

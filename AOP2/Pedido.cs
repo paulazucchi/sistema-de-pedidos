@@ -11,34 +11,77 @@ namespace AOP2
 
         public Pedido()
         {
-
+            this.ListaProdutos = new List<Produto>();
+            this.DataEmissao = DateTime.Now;
         }
 
         public Pedido(int pedidoId, float valorDoProduto, string descricaoDoProduto)
         {
-            this.pedidoId = pedidoId;
-            this.dataEmissao = DateTime.Now;
-            this.valorDoProduto = valorDoProduto;
-            this.descricaoDoProduto = descricaoDoProduto;
+            this.PedidoId = pedidoId;
+            this.DataEmissao = DateTime.Now;
+            this.ValorFinal = 0; ;
+            this.ListaProdutos = new List<Produto>();
         }
 
-        public int pedidoId { get; set; }   
+        public int PedidoId { get; set; }   
 
-        public DateTime dataEmissao { get; set; }
+        public DateTime DataEmissao { get; set; }
 
-        public float valorDoProduto { get; set; }
+        public float ValorFinal { get; set; }
 
-        public string descricaoDoProduto { get; set; }
 
-        public float calcularPrecoTotal()
+        public List<Produto> ListaProdutos { get; set; }
+
+
+
+
+
+
+        public float CalcularPrecoTotal()
         {
-            return 0f;
+            float total = 0;
+
+            foreach (Produto produto in ListaProdutos)
+            {
+                total += produto.ValorTotal();
+            }
+
+            return total;
         }
 
         public override string ToString()
         {
-            return $"Id: {pedidoId}  Descricao: {descricaoDoProduto} Valor: {valorDoProduto} Data: {dataEmissao.ToString()}";
+            return $"Pedido Id: {PedidoId}   \nValor Total: {CalcularPrecoTotal()} \nValor Final: {ValorFinal} \nData: {DataEmissao.ToString()}";
 
         }
+
+        public void AdicionarProduto(String descricao, float valor, int quantidade)
+        {
+            Produto produto = new Produto(descricao, valor, quantidade);
+
+            this.ListaProdutos.Add(produto);
+
+            this.ValorFinal = CalcularPrecoTotal();
+        }
+
+        public void ExibirProdutos()
+        {
+            for (int i = 0; i < ListaProdutos.Count; i++)
+            {
+                Produto produto = ListaProdutos[i];
+                Console.WriteLine($"Produto: {i} Descricao: {ListaProdutos[i].Descricao} | Valor Unitario: {ListaProdutos[i].Valor} | Quantidade: {ListaProdutos[i].Quantidade}");
+            }
+                
+        }
+
+        public void ExibirPedido()
+        {
+            
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine(ToString());
+            ExibirProdutos();
+            Console.WriteLine("---------------------------------------------");
+        }
+
     }
 }

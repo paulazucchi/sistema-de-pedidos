@@ -8,10 +8,10 @@ namespace AOP2
 {
     internal abstract class Funcionario
     {
-        private string Nome { get; set; }
-        private int Matricula { get; set; }
+        public string Nome { get; set; }
+        public int Matricula { get; set; }
 
-        public abstract float calcularDesconto( float valorProduto);
+        public abstract float CalcularDesconto( float valorProduto);
 
     }
 }
